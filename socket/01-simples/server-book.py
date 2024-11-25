@@ -1,7 +1,7 @@
 from socket  import *
 from constCS import *
 s = socket(AF_INET, SOCK_STREAM) 
-s.bind(('localhost', PORT))  #- Mapear a porta de escuta
+s.bind((HOST, PORT))  #- Mapear a porta de escuta
 s.listen(2)           #- quantidade de conexoes em espera
 (conn, addr) = s.accept()  # returns new socket and addr. client 
 while True:                # forever

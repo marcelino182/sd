@@ -1,2 +1,3 @@
-HOST = 'localhost' #para testar remoto mudar o IP
-PORT = 50007
+HOST='' # 
+PORT=50007
+SERVER='localhost'# alterar o ip do servidor que o cliente ira acessar
