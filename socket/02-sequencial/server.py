@@ -1,5 +1,6 @@
 from socket  import *
 from constCS import * #- definir HOST PORT
+
 print("servidor iniciando, criando socket, mapeando")
 s = socket(AF_INET, SOCK_STREAM) 
 s.bind((HOST, PORT))  #- Mapear a porta de escuta
