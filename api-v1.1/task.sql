@@ -16,3 +16,9 @@ CREATE TABLE tasks (
     user_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+CREATE USER 'username'@'localhost' IDENTIFIED by 'password';
+
+GRANT all PRIVILEGES on todo_app.* to 'username'@'localhost'; 
+
+FLUSH PRIVILEGES;

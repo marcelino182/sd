@@ -14,6 +14,9 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 api = Api(app)
+#CORS(app)
+# liberar comunicação de qualquer origem com CORS em flask
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Modelos
 class User(db.Model):
@@ -144,6 +147,16 @@ class Task(Resource):
 api.add_resource(Register, "/register")
 api.add_resource(Login, "/login")
 api.add_resource(Task, "/tasks", "/tasks/<int:task_id>")
+
+from flask import send_from_directory
+
+@app.route('/')
+def serve_frontend():
+    return send_from_directory('frontend', 'index.html')
+
+@app.route('/<path:path>')
+def serve_static_files(path):
+    return send_from_directory('frontend', path)
 
 if __name__ == "__main__":
     app.run(debug=True)
