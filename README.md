@@ -1,6 +1,7 @@
 # Sistemas Distribuídos
 Disciplina Sistemas Distribuídos
-
+## Configurações Básicas de Rede
+Utilizar as recomendações no arquivo configs.md para resolver problemas com a VM modelo utilizada nos laboratórios
 ## Prática 01 Cluster Load Balancer
 
 Criar uma máquina virtual para ser o servidor de load balance
